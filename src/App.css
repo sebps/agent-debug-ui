@@ -1,0 +1,38 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Reset Vite defaults that break full-screen apps */
+:root {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  text-align: left; /* Fixes the Vite 'center' alignment */
+  max-width: none;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: initial;
+  min-width: 100vw;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* React Flow Specific Reset */
+.react-flow__node {
+  cursor: grab;
+}
+
+.react-flow__node:active {
+  cursor: grabbing;
+}
